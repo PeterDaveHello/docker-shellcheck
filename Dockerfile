@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+MAINTAINER Peter Dave Hello <hsu@peterdavehello.org>
+
 # Prevent dialog during apt install
 ENV DEBIAN_FRONTEND noninteractive
 
