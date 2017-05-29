@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 
+# Prevent dialog during apt install
+ENV DEBIAN_FRONTEND noninteractive
+
 # Pick a Ubuntu apt mirror site for better speed
 # ref: https://launchpad.net/ubuntu/+archivemirrors
 ENV UBUNTU_APT_SITE ubuntu.cs.utah.edu
