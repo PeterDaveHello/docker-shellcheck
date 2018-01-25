@@ -1,4 +1,4 @@
-ShellCheck on the latest Ubuntu LTS release.
+ShellCheck on the latest Alpine release.
 
 --
 
