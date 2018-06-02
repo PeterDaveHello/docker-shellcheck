@@ -2,7 +2,7 @@ FROM alpine:latest
 
 MAINTAINER Peter Dave Hello <hsu@peterdavehello.org>
 
-ENV SHELLCHECK_VERSION=0.4.7
+ENV SHELLCHECK_VERSION=0.5.0
 
 RUN apk add -U bash && \
     rm -rf /var/cache/apk/*
