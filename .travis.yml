@@ -1,0 +1,29 @@
+git:
+  depth: 5
+
+stages:
+  - Test
+
+jobs:
+  include:
+    - stage: Test
+      env:
+        - Test: dockerfile_lint
+      language: node_js
+      node_js:
+        - "8"
+      script:
+        - npx --cache .npx dockerfile_lint
+      cache:
+        directories:
+          - .npx
+
+    - stage: Test
+      env:
+        - Test: Build Docker image
+      language: generic
+      script:
+        - docker build -t peterdavehello-shellcheck-test .
+        - docker run --rm -it peterdavehello-shellcheck-test shellcheck --version
+      services:
+        - docker
