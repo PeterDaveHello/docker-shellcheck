@@ -1,9 +1,30 @@
-ShellCheck on the latest Alpine release.
+# Dockerized ShellCheck
 
---
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MyDockerfiles/ShellCheck)
+[![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/shellcheck.svg)](https://hub.docker.com/r/peterdavehello/shellcheck/)
+[![Docker image layers](https://images.microbadger.com/badges/image/peterdavehello/shellcheck.svg)](https://microbadger.com/images/peterdavehello/shellcheck/)
+[![Docker image version](https://images.microbadger.com/badges/version/peterdavehello/shellcheck.svg)](https://hub.docker.com/r/peterdavehello/shellcheck/tags/)
 
-GitHub: https://github.com/MyDockerfiles/ShellCheck
+[![Docker Hub badge](http://dockeri.co/image/peterdavehello/shellcheck)](https://hub.docker.com/r/peterdavehello/shellcheck/)
 
-Docker hub: https://hub.docker.com/r/peterdavehello/shellcheck/
+## Usage
 
-Docker pull command: `docker pull peterdavehello/shellcheck`
+### Command line
+
+```sh
+$ docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck shellcheck /scripts/script.sh
+```
+
+### In GitLab or other Docker native CI
+
+```yaml
+shellcheck:
+  stage: test
+  image: peterdavehello/shellcheck:0.5.0
+  before_script:
+    - shellcheck --version
+  script:
+    - find . -name "*.sh" | xargs -n 1 shellcheck --color=always
+  tags:
+    - docker
+```
