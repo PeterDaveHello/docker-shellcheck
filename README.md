@@ -7,6 +7,15 @@
 
 [![Docker Hub badge](http://dockeri.co/image/peterdavehello/shellcheck)](https://hub.docker.com/r/peterdavehello/shellcheck/)
 
+## About ShellCheck
+
+A static analysis tool for shell scripts, homepage and repository below:
+
+- https://www.shellcheck.net
+- https://github.com/koalaman/shellcheck
+
+Please note that this Docker image repository is not part of the ShellCheck project.
+
 ## Usage
 
 ### Command line
