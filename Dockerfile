@@ -2,9 +2,9 @@ FROM alpine:3.8
 
 LABEL maintainer="Peter Dave Hello <hsu@peterdavehello.org>"
 LABEL name="shellcheck"
-LABEL version="0.5.0"
+LABEL version="0.6.0"
 
-ENV SHELLCHECK_VERSION=0.5.0
+ENV SHELLCHECK_VERSION=0.6.0
 
 RUN apk add --no-cache bash
 
