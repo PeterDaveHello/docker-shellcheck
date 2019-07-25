@@ -29,7 +29,10 @@ $ docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck shellcheck /sc
 ```yaml
 shellcheck:
   stage: test
-  image: peterdavehello/shellcheck:0.5.0
+  image: peterdavehello/shellcheck:0.6.0
+  only:
+    changes:
+      - "**/*.bash"
   before_script:
     - shellcheck --version
   script:
