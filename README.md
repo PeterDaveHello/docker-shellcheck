@@ -24,7 +24,7 @@ Please note that this Docker image repository is not part of the ShellCheck proj
 $ docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck shellcheck /scripts/script.sh
 ```
 
-### In GitLab or other Docker native CI
+### In GitLab CI
 
 ```yaml
 shellcheck:
