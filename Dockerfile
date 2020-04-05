@@ -10,7 +10,7 @@ RUN apk add --no-cache bash
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-RUN wget https://storage.googleapis.com/shellcheck/shellcheck-v$SHELLCHECK_VERSION.linux.x86_64.tar.xz -O- | tar xJvf - shellcheck-v$SHELLCHECK_VERSION/shellcheck && \
+RUN wget https://github.com/koalaman/shellcheck/releases/download/v${SHELLCHECK_VERSION}/shellcheck-v${SHELLCHECK_VERSION}.linux.x86_64.tar.xz -O- | tar xJvf - shellcheck-v$SHELLCHECK_VERSION/shellcheck && \
     mv shellcheck-v$SHELLCHECK_VERSION/shellcheck /bin && \
     rmdir shellcheck-v$SHELLCHECK_VERSION/ && \
     shellcheck -V
