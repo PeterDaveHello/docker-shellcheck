@@ -22,8 +22,20 @@ jobs:
       env:
         - Test: Build Docker image
       language: generic
+      arch: amd64
       script:
         - docker build -t peterdavehello-shellcheck-test .
-        - docker run --rm -it peterdavehello-shellcheck-test shellcheck --version
+        - docker run --rm peterdavehello-shellcheck-test shellcheck --version
+      services:
+        - docker
+
+    - stage: Test
+      env:
+        - Test: Build ARM64 Docker image
+      language: generic
+      arch: arm64
+      script:
+        - docker build -t peterdavehello-shellcheck-test .
+        - docker run --rm -w /tmp peterdavehello-shellcheck-test shellcheck --version
       services:
         - docker
