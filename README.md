@@ -2,8 +2,6 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MyDockerfiles/ShellCheck)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/shellcheck.svg)](https://hub.docker.com/r/peterdavehello/shellcheck/)
-[![Docker image layers](https://images.microbadger.com/badges/image/peterdavehello/shellcheck.svg)](https://microbadger.com/images/peterdavehello/shellcheck/)
-[![Docker image version](https://images.microbadger.com/badges/version/peterdavehello/shellcheck.svg)](https://hub.docker.com/r/peterdavehello/shellcheck/tags/)
 
 [![Docker Hub badge](https://dockeri.co/image/peterdavehello/shellcheck)](https://hub.docker.com/r/peterdavehello/shellcheck/)
 
