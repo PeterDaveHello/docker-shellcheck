@@ -23,7 +23,7 @@ See [tags](https://hub.docker.com/r/peterdavehello/shellcheck/tags) page on Dock
 ### Command line
 
 ```sh
-SHELLCHECK_VERSION=0.7.1
+SHELLCHECK_VERSION=0.11.0
 docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck:$SHELLCHECK_VERSION shellcheck /scripts/script.sh
 ```
 
@@ -32,7 +32,7 @@ docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck:$SHELLCHECK_VERS
 ```yaml
 shellcheck:
   stage: test
-  image: peterdavehello/shellcheck:0.7.1
+  image: peterdavehello/shellcheck:0.11.0
   only:
     changes:
       - "**/*.bash"
