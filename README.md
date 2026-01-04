@@ -23,8 +23,8 @@ See [tags](https://hub.docker.com/r/peterdavehello/shellcheck/tags) page on Dock
 ### Command line
 
 ```sh
-SHELLCHECK_VERSION=0.7.1
-docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck:$SHELLCHECK_VERSION shellcheck /scripts/script.sh
+SHELLCHECK_VERSION=0.8.0
+docker run --rm -u "$(id -u):$(id -g)" -v "$PWD:$PWD" -w "$PWD" peterdavehello/shellcheck:$SHELLCHECK_VERSION
 ```
 
 ### In GitLab CI
@@ -32,14 +32,14 @@ docker run --rm -it -v `pwd`:/scripts peterdavehello/shellcheck:$SHELLCHECK_VERS
 ```yaml
 shellcheck:
   stage: test
-  image: peterdavehello/shellcheck:0.7.1
+  image: peterdavehello/shellcheck:0.8.0
   only:
     changes:
-      - "**/*.bash"
+      - "**/*.sh"
   before_script:
     - shellcheck --version
   script:
-    - find . -name "*.sh" | xargs -n 1 shellcheck --color=always
+    - find . -type f -name '*.sh' -print0 | xargs -0r shellcheck --color=always
   tags:
     - docker
 ```
