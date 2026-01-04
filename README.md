@@ -3,8 +3,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/MyDockerfiles/ShellCheck)
 [![Docker Hub pulls](https://img.shields.io/docker/pulls/peterdavehello/shellcheck.svg)](https://hub.docker.com/r/peterdavehello/shellcheck/)
 
-[![Docker Hub badge](https://dockeri.co/image/peterdavehello/shellcheck)](https://hub.docker.com/r/peterdavehello/shellcheck/)
-
 ## About ShellCheck
 
 A static analysis tool for shell scripts, homepage and repository below:
